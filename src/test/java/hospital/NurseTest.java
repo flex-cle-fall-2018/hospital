@@ -1,6 +1,7 @@
 package hospital;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
@@ -32,5 +33,17 @@ public class NurseTest {
 		int testPay = testNurse.calculatePay();
 		// Assert
 		assertThat(testPay, is(50000));
+	}
+	
+	@Test
+	public void shouldBeAbleToCareForPatient() {
+		Nurse testNurse = new Nurse("", 0);
+		Patient testPatient = new Patient();
+		
+		int healthBefore = testPatient.getHealth();
+		testNurse.careForPatient(testPatient);
+		int healthAfter = testPatient.getHealth();
+
+		assertThat(healthAfter, is(greaterThan(healthBefore)));
 	}
 }

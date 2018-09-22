@@ -1,6 +1,6 @@
 package hospital;
 
-public class Nurse extends Employee {
+public class Nurse extends Employee implements MedicalDuties {
 
 	Nurse(String name, int number) {
 		super(name, number);
@@ -9,6 +9,11 @@ public class Nurse extends Employee {
 	@Override
 	public int calculatePay() {
 		return 50000;
+	}
+
+	@Override
+	public void careForPatient(Patient testPatient) {
+		testPatient.receiveCare();		
 	}
 
 }
