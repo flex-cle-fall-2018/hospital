@@ -9,41 +9,42 @@ public class DoctorTest {
 
 	@Test
 	public void doctorShouldHaveName() {
-		//Arrange
+		// Arrange
 		Doctor testDoctor = new Doctor("Bob", 0, "brain");
-		//Act
+		// Act
 		String testName = testDoctor.getName();
-		//Assert
-		assertThat(testName ,is("Bob"));
+		// Assert
+		assertThat(testName, is("Bob"));
 	}
-	
+
 	@Test
 	public void doctorShouldHaveNumber() {
-		//Arrange
+		// Arrange
 		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
-		//Act
+		// Act
 		int testNumber = testDoctor.getNumber();
-		//Assert
-		assertThat(testNumber ,is(123455));
+		// Assert
+		assertThat(testNumber, is(123455));
 	}
-	
+
 	@Test
 	public void doctorShouldHaveSpecialty() {
-		//arrange
+		// arrange
 		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
-		//act
+		// act
 		String testSpecial = testDoctor.getSpecialty();
-		//assert
+		// assert
 		assertThat(testSpecial, is("brain"));
 	}
-	
+
 	@Test
 	public void doctorShouldMake90000() {
-		//Arrange
+		// Arrange
 		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
-		//Act
-		int testPay = testDoctor.calculatePay();		
-		//Assert
+		// Act
+		int testPay = testDoctor.calculatePay();
+		// Assert
 		assertThat(testPay, is(90000));
 	}
+
 }
