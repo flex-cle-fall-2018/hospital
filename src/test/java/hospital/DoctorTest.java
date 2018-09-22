@@ -29,11 +29,21 @@ public class DoctorTest {
 	
 	@Test
 	public void doctorShouldHaveSpecialty() {
-	//arrange
-	Doctor testDoctor = new Doctor("Bob", 123455, "brain");
-	//act
-	String testSpecial = testDoctor.getSpecialty();
-	//assert
-	assertThat(testSpecial, is("brain"));
+		//arrange
+		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
+		//act
+		String testSpecial = testDoctor.getSpecialty();
+		//assert
+		assertThat(testSpecial, is("brain"));
+	}
+	
+	@Test
+	public void doctorShouldMake90000() {
+		//Arrange
+		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
+		//Act
+		int testPay = testDoctor.calculatePay();		
+		//Assert
+		assertThat(testPay, is(90000));
 	}
 }

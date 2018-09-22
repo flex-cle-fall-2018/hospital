@@ -22,4 +22,8 @@ public class Doctor {
 		return specialty;
 	}
 
+	public int calculatePay() {
+		return 90000;
+	}
+
 }
