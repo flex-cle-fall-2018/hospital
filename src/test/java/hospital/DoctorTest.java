@@ -10,7 +10,7 @@ public class DoctorTest {
 	@Test
 	public void doctorShouldHaveName() {
 		//Arrange
-		Doctor testDoctor = new Doctor("Bob", 0);
+		Doctor testDoctor = new Doctor("Bob", 0, "brain");
 		//Act
 		String testName = testDoctor.getName();
 		//Assert
@@ -20,10 +20,20 @@ public class DoctorTest {
 	@Test
 	public void doctorShouldHaveNumber() {
 		//Arrange
-		Doctor testDoctor = new Doctor("Bob", 123455);
+		Doctor testDoctor = new Doctor("Bob", 123455, "brain");
 		//Act
 		int testNumber = testDoctor.getNumber();
 		//Assert
 		assertThat(testNumber ,is(123455));
+	}
+	
+	@Test
+	public void doctorShouldHaveSpecialty() {
+	//arrange
+	Doctor testDoctor = new Doctor("Bob", 123455, "brain");
+	//act
+	String testSpecial = testDoctor.getSpecialty();
+	//assert
+	assertThat(testSpecial, is("brain"));
 	}
 }
